@@ -390,77 +390,77 @@ impl Chip8 {
 
     fn table_0(&mut self) {
         let mut table_0: [fn(&mut Chip8); 0xE + 1] = [
-            Chip8::op_null, // 0x1
-            Chip8::op_null, // 0x2
-            Chip8::op_null, // 0x3
-            Chip8::op_null, // 0x4
-            Chip8::op_null, // 0x5
-            Chip8::op_null, // 0x6
-            Chip8::op_null, // 0x7
-            Chip8::op_null, // 0x8
-            Chip8::op_null, // 0x9
-            Chip8::op_null, // 0xA
-            Chip8::op_null, // 0xB
-            Chip8::op_null, // 0xC
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0xD
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
         ];
-        table_0[0x0] = Chip8::op_00e0; // 0xE
-        table_0[0xE] = Chip8::op_00ee; // 0xF
+        table_0[0x0] = Chip8::op_00e0;
+        table_0[0xE] = Chip8::op_00ee;
 
         table_0[self.opcode & 0x000Fusize](self);
     }
 
     fn table_8(&mut self) {
         let mut table_8: [fn(&mut Chip8); 0xE + 1] = [
-            Chip8::op_null, // 0x8
-            Chip8::op_null, // 0x9
-            Chip8::op_null, // 0xA
-            Chip8::op_null, // 0xB
-            Chip8::op_null, // 0xC
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0x8
-            Chip8::op_null, // 0x9
-            Chip8::op_null, // 0xA
-            Chip8::op_null, // 0xB
-            Chip8::op_null, // 0xC
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0xD
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
         ];
 
-        table_8[0x0] = Chip8::op_8xy0; // 0x0
-        table_8[0x1] = Chip8::op_8xy1; // 0x1
-        table_8[0x2] = Chip8::op_8xy2; // 0x2
-        table_8[0x3] = Chip8::op_8xy3; // 0x3
-        table_8[0x4] = Chip8::op_8xy4; // 0x4
-        table_8[0x5] = Chip8::op_8xy5; // 0x5
-        table_8[0x6] = Chip8::op_8xy6; // 0x6
-        table_8[0x7] = Chip8::op_8xy7; // 0x7
-        table_8[0xE] = Chip8::op_8xye; // 0xF
+        table_8[0x0] = Chip8::op_8xy0;
+        table_8[0x1] = Chip8::op_8xy1;
+        table_8[0x2] = Chip8::op_8xy2;
+        table_8[0x3] = Chip8::op_8xy3;
+        table_8[0x4] = Chip8::op_8xy4;
+        table_8[0x5] = Chip8::op_8xy5;
+        table_8[0x6] = Chip8::op_8xy6;
+        table_8[0x7] = Chip8::op_8xy7;
+        table_8[0xE] = Chip8::op_8xye;
 
         table_8[self.opcode & 0x000Fusize](self);
     }
 
     fn table_e(&mut self) {
         let mut table_e: [fn(&mut Chip8); 0xE + 1] = [
-            Chip8::op_null, // 0x0
-            Chip8::op_null, // 0x2
-            Chip8::op_null, // 0x4
-            Chip8::op_null, // 0x5
-            Chip8::op_null, // 0x6
-            Chip8::op_null, // 0x7
-            Chip8::op_null, // 0x8
-            Chip8::op_null, // 0x9
-            Chip8::op_null, // 0xA
-            Chip8::op_null, // 0xB
-            Chip8::op_null, // 0xC
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0xE
-            Chip8::op_null, // 0xE
-            Chip8::op_null, // 0xE
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
         ];
         table_e[0x1] = Chip8::op_exa1;
         table_e[0xE] = Chip8::op_ex9e;
@@ -470,119 +470,119 @@ impl Chip8 {
 
     fn table_f(&mut self) {
         let mut table_f: [fn(&mut Chip8); 0x65 + 1] = [
-            Chip8::op_null, // 0xB
-            Chip8::op_null, // 0xC
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0xE
-            Chip8::op_null, // 0xF
-            Chip8::op_null, // 0xB
-            Chip8::op_null, // 0xC
-            Chip8::op_null, // 0xC
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0xE
-            Chip8::op_null, // 0xF
-            Chip8::op_null, // 0x10
-            Chip8::op_null, // 0x11
-            Chip8::op_null, // 0x12
-            Chip8::op_null, // 0x13
-            Chip8::op_null, // 0xE
-            Chip8::op_null, // 0xF
-            Chip8::op_null, // 0x10
-            Chip8::op_null, // 0x11
-            Chip8::op_null, // 0x12
-            Chip8::op_null, // 0x13
-            Chip8::op_null, // 0x10
-            Chip8::op_null, // 0x11
-            Chip8::op_null, // 0x12
-            Chip8::op_null, // 0x13
-            Chip8::op_null, // 0x0
-            Chip8::op_null, // 0x1
-            Chip8::op_null, // 0x2
-            Chip8::op_null, // 0x3
-            Chip8::op_null, // 0x4
-            Chip8::op_null, // 0x5
-            Chip8::op_null, // 0x6
-            Chip8::op_null, // 0x8
-            Chip8::op_null, // 0x9
-            Chip8::op_null, // 0xB
-            Chip8::op_null, // 0xC
-            Chip8::op_null, // 0xD
-            Chip8::op_null, // 0xE
-            Chip8::op_null, // 0xF
-            Chip8::op_null, // 0x10
-            Chip8::op_null, // 0x11
-            Chip8::op_null, // 0x12
-            Chip8::op_null, // 0x13
-            Chip8::op_null, // 0x14
-            Chip8::op_null, // 0x16
-            Chip8::op_null, // 0x17
-            Chip8::op_null, // 0x19
-            Chip8::op_null, // 0x1A
-            Chip8::op_null, // 0x1B
-            Chip8::op_null, // 0x1C
-            Chip8::op_null, // 0x1D
-            Chip8::op_null, // 0x1F
-            Chip8::op_null, // 0x20
-            Chip8::op_null, // 0x21
-            Chip8::op_null, // 0x22
-            Chip8::op_null, // 0x23
-            Chip8::op_null, // 0x24
-            Chip8::op_null, // 0x25
-            Chip8::op_null, // 0x26
-            Chip8::op_null, // 0x27
-            Chip8::op_null, // 0x30
-            Chip8::op_null, // 0x31
-            Chip8::op_null, // 0x32
-            Chip8::op_null, // 0x33
-            Chip8::op_null, // 0x34
-            Chip8::op_null, // 0x35
-            Chip8::op_null, // 0x36
-            Chip8::op_null, // 0x37
-            Chip8::op_null, // 0x38
-            Chip8::op_null, // 0x39
-            Chip8::op_null, // 0x40
-            Chip8::op_null, // 0x41
-            Chip8::op_null, // 0x42
-            Chip8::op_null, // 0x43
-            Chip8::op_null, // 0x44
-            Chip8::op_null, // 0x45
-            Chip8::op_null, // 0x46
-            Chip8::op_null, // 0x47
-            Chip8::op_null, // 0x48
-            Chip8::op_null, // 0x49
-            Chip8::op_null, // 0x50
-            Chip8::op_null, // 0x51
-            Chip8::op_null, // 0x52
-            Chip8::op_null, // 0x53
-            Chip8::op_null, // 0x54
-            Chip8::op_null, // 0x56
-            Chip8::op_null, // 0x57
-            Chip8::op_null, // 0x58
-            Chip8::op_null, // 0x59
-            Chip8::op_null, // 0x60
-            Chip8::op_null, // 0x61
-            Chip8::op_null, // 0x62
-            Chip8::op_null, // 0x63
-            Chip8::op_null, // 0x64
-            Chip8::op_null, // 0x64
-            Chip8::op_null, // 0x64
-            Chip8::op_null, // 0x64
-            Chip8::op_null, // 0x64
-            Chip8::op_null, // 0x64
-            Chip8::op_null, // 0x64
-            Chip8::op_null, // 0x64
-            Chip8::op_null, // 0x64
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
+            Chip8::op_null,
         ];
 
         table_f[0x07] = Chip8::op_fx07;
-		table_f[0x0A] = Chip8::op_fx0a;
-		table_f[0x15] = Chip8::op_fx15;
-		table_f[0x18] = Chip8::op_fx18;
-		table_f[0x1E] = Chip8::op_fx1e;
-		table_f[0x29] = Chip8::op_fx29;
-		table_f[0x33] = Chip8::op_fx33;
-		table_f[0x55] = Chip8::op_fx55;
-		table_f[0x65] = Chip8::op_fx65;
+        table_f[0x0A] = Chip8::op_fx0a;
+        table_f[0x15] = Chip8::op_fx15;
+        table_f[0x18] = Chip8::op_fx18;
+        table_f[0x1E] = Chip8::op_fx1e;
+        table_f[0x29] = Chip8::op_fx29;
+        table_f[0x33] = Chip8::op_fx33;
+        table_f[0x55] = Chip8::op_fx55;
+        table_f[0x65] = Chip8::op_fx65;
 
         table_f[self.opcode & 0x00FFusize](self);
     }
