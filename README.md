@@ -24,4 +24,6 @@ Please see the example below. The command line invocation is:
 ./target/debug/afoley-chip8 --rom ./roms/tetris.ch8
 ```
 
-![demo](./img/demo.mp4)
+
+https://github.com/afoley587/rust-chip8/assets/54959686/90f4bf77-011a-42d6-b162-27b3ebc56eae
+
