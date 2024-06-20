@@ -92,10 +92,3 @@ fn main() -> Result<(), String> {
 
     Ok(())
 }
-
-
-// fn main() {
-//     let mut chip_8 = Chip8::load_rom("/Users/alexanderfoley/Projects/courses/fuckit-its-rust/01-new-to-rust/afoley-chip8/roms/TETRIS");
-//     chip_8.cycle();
-//     // println!("{:#?}", chip_8);
-// }
