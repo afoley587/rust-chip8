@@ -16,3 +16,12 @@ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev
 ## Running
 You can build this project with `cargo build` and then run with 
 `./target/debug/afoley-chip8 --rom ./roms/<insert_rom>.ch8`.
+
+## Example
+Please see the example below. The command line invocation is:
+
+```shell
+./target/debug/afoley-chip8 --rom ./roms/tetris.ch8
+```
+
+![demo](./img/demo.mp4)
